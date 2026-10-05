@@ -6,9 +6,9 @@ Kelas: A
 
 ## Identitas Proyek
 Tema: Klinik
-Nama Organisasi: Klinik Mutiara Ichayani
+Nama Organisasi: Klinik Mutiara 
 ## Lingkup Layanan
-Klinik Mutiara Ichayani merupakan organisasi fiktif yang menyediakan layanan
+Klinik Mutiara merupakan organisasi fiktif yang menyediakan layanan
 kesehatan bagi pasien. Sistem basis data klinik ini digunakan untuk mengelola
 proses pendaftaran pasien, pencatatan kunjungan, pencatatan tindakan yang
 diberikan kepada pasien, pengelolaan resep obat, serta pembayaran layanan
