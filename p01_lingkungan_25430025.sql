@@ -1,5 +1,6 @@
+buatkan laporannya ini -- Skrip lingkungan Modul 1
+-- Jangan menulis password asli di berkas yang diunggah ke GitHub.
 
--- D.4 Membuat database praktik dan akun kerja
 CREATE DATABASE IF NOT EXISTS kopma_025
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -8,9 +9,7 @@ CREATE USER IF NOT EXISTS 'mhs_025'@'localhost'
 
 GRANT ALL PRIVILEGES ON kopma_025.* TO 'mhs_025'@'localhost';
 
-
--- F. Tugas Mandiri: Milestone Proyek 1
--- Tema: Klinik
+-- Milestone Proyek 1: Klinik
 CREATE DATABASE IF NOT EXISTS klinik_025
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
