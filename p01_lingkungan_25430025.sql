@@ -1,5 +1,3 @@
-buatkan laporannya ini -- Skrip lingkungan Modul 1
--- Jangan menulis password asli di berkas yang diunggah ke GitHub.
 
 CREATE DATABASE IF NOT EXISTS kopma_025
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
