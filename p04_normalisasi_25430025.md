@@ -1,9 +1,9 @@
 # Normalisasi Basis Data — Proyek Klinik Mutiara
 
-## Nama: Mutiara Icha Yani
-## NPM: 25430025
-## Kelas: A
-## Proyek: Klinik Mutiara
+**Nama:** Mutiara Icha Yani  
+**Npm:** 25430025  
+**Kelas:** A  
+**Proyek:** Basis Data
 
 ## 1. Dokumen Sumber
 
