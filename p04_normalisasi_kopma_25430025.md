@@ -1,8 +1,8 @@
 # Praktikum 4 — Normalisasi dan Skema Relasional (Kopma)
 
-# Nama: Mutiara Icha Yani
-# NPM: 25430025
-# Kelas: A
+**Nama:** Mutiara Icha Yani  
+**Npm:** 25430025  
+**Kelas:** A  
 
 ## D.1 Dari UNF ke 1NF
 
