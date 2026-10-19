@@ -1,0 +1,244 @@
+# LAPORAN PRAKTIKUM BASIS DATA — PERTEMUAN 5
+
+**Nama:** Mutiara Icha Yani  
+**NIM:** 25430025  
+**Kelas:** A  
+**Tanggal:** 19 Oktober 2026
+
+---
+
+## 1. Tujuan Praktikum
+
+Praktikum ini bertujuan memahami penggunaan Data Definition Language (DDL) untuk membuat dan mengubah struktur basis data, menerapkan primary key dan foreign key, menggunakan constraint, serta menguji perubahan struktur tabel dengan perintah `ALTER TABLE`.
+
+## 2. Ringkasan Dasar Teori
+
+- **CREATE TABLE** digunakan untuk membuat tabel baru.
+- **ALTER TABLE** digunakan untuk mengubah struktur tabel.
+- **PRIMARY KEY (PK)** menjadi identitas unik setiap baris.
+- **FOREIGN KEY (FK)** menjaga hubungan antartabel.
+- **CHECK** membatasi nilai berdasarkan kondisi tertentu.
+- **UNIQUE** mencegah nilai duplikat pada kolom yang ditentukan.
+- **ON DELETE SET NULL** mengatur agar nilai foreign key menjadi `NULL` ketika baris induk dihapus, jika kolom tersebut mengizinkan `NULL`.
+
+## 3. Hasil Langkah Percobaan
+
+Bagian ini berisi dokumentasi percobaan menggunakan phpMyAdmin. Screenshot hasil berhasil maupun pesan galat dicantumkan sesuai kondisi yang benar-benar muncul selama praktikum.
+
+### 3.1 Memeriksa Daftar Tabel
+
+![Gambar 1. Daftar tabel pada basis data](img/gambar_01.png)
+
+*Gambar 1. Tampilan daftar tabel untuk memeriksa objek yang tersedia dalam basis data.*
+
+### 3.2 Pesan Galat pada Pengujian SQL
+
+![Gambar 2. Pesan galat pengujian SQL](img/gambar_02.png)
+
+*Gambar 2. Pesan galat yang muncul ketika perintah SQL dijalankan.*
+
+### 3.3 Pengujian SQL Berikutnya
+
+![Gambar 3. Pesan galat pengujian berikutnya](img/gambar_03.png)
+
+*Gambar 3. Dokumentasi pesan galat pada percobaan SQL berikutnya.*
+
+### 3.4 Hasil Eksekusi Perintah SQL
+
+![Gambar 4. Hasil eksekusi SQL](img/gambar_04.png)
+
+*Gambar 4. Tampilan respons phpMyAdmin setelah perintah SQL dijalankan.*
+
+### 3.5 Pesan Galat dari Eksekusi SQL
+
+![Gambar 5. Pesan galat SQL](img/gambar_05.png)
+
+*Gambar 5. Bukti pesan galat yang muncul selama pengujian.*
+
+### 3.6 Hasil Perintah SQL
+
+![Gambar 6. Hasil perintah SQL](img/gambar_06.png)
+
+*Gambar 6. Tampilan hasil eksekusi perintah SQL pada phpMyAdmin.*
+
+### 3.7 Perintah ALTER TABLE
+
+![Gambar 7. Perintah ALTER TABLE](img/gambar_07.png)
+
+*Gambar 7. Perintah ALTER TABLE yang digunakan untuk perubahan struktur atau constraint stok minimum.*
+
+### 3.8 Respons phpMyAdmin
+
+![Gambar 8. Respons phpMyAdmin](img/gambar_08.png)
+
+*Gambar 8. Respons yang ditampilkan phpMyAdmin setelah perintah SQL dijalankan.*
+
+### 3.9 Pengujian SQL
+
+![Gambar 9. Pesan galat pengujian SQL](img/gambar_09.png)
+
+*Gambar 9. Dokumentasi pesan galat pada proses pengujian.*
+
+### 3.10 Daftar Tabel dan Basis Data
+
+![Gambar 10. Daftar tabel basis data](img/gambar_10.png)
+
+*Gambar 10. Tampilan daftar tabel yang tersedia dalam basis data.*
+
+### 3.11 Hasil Eksekusi SQL
+
+![Gambar 11. Hasil eksekusi SQL](img/gambar_11.png)
+
+*Gambar 11. Tampilan hasil eksekusi SQL pada phpMyAdmin.*
+
+### 3.12 Daftar Tabel Setelah Pengujian
+
+![Gambar 12. Daftar tabel setelah pengujian](img/gambar_12.png)
+
+*Gambar 12. Daftar tabel untuk memeriksa objek basis data setelah pengujian.*
+
+### 3.13 Pengujian Struktur atau Constraint
+
+![Gambar 13. Pengujian struktur tabel](img/gambar_13.png)
+
+*Gambar 13. Tampilan halaman SQL atau struktur tabel yang digunakan dalam pengujian.*
+
+### 3.14 Hasil atau Pesan SQL
+
+![Gambar 14. Hasil pengujian SQL](img/gambar_14.png)
+
+*Gambar 14. Respons phpMyAdmin sesuai hasil percobaan.*
+
+### 3.15 Perubahan Constraint atau Foreign Key
+
+![Gambar 15. Perubahan constraint atau foreign key](img/gambar_15.png)
+
+*Gambar 15. Perintah SQL yang digunakan dalam perubahan struktur atau relasi tabel.*
+
+### 3.16 Daftar Tabel Basis Data
+
+![Gambar 16. Daftar tabel basis data](img/gambar_16.png)
+
+*Gambar 16. Tampilan objek tabel yang tersedia pada basis data.*
+
+### 3.17 Pemeriksaan Tabel dan Data
+
+![Gambar 17. Pemeriksaan tabel dan data](img/gambar_17.png)
+
+*Gambar 17. Tampilan tabel dan data yang diperiksa melalui phpMyAdmin.*
+
+### 3.18 Pengaturan Struktur atau Relasi Tabel
+
+![Gambar 18. Pengaturan struktur atau relasi](img/gambar_18.png)
+
+*Gambar 18. Tampilan pengaturan struktur atau relasi tabel.*
+
+### 3.19 Pesan Galat SQL
+
+![Gambar 19. Pesan galat SQL](img/gambar_19.png)
+
+*Gambar 19. Dokumentasi pesan galat yang muncul setelah perintah SQL dijalankan.*
+
+### 3.20 Pengujian SQL Berikutnya
+
+![Gambar 20. Pesan galat pengujian SQL](img/gambar_20.png)
+
+*Gambar 20. Pesan galat yang tampil pada percobaan berikutnya.*
+
+### 3.21 Pesan Galat saat Menjalankan SQL
+
+![Gambar 21. Pesan galat saat menjalankan SQL](img/gambar_21.png)
+
+*Gambar 21. Dokumentasi percobaan yang menghasilkan pesan galat.*
+
+### 3.22 Pesan Galat Lainnya
+
+![Gambar 22. Pesan galat lainnya](img/gambar_22.png)
+
+*Gambar 22. Bukti kendala yang muncul selama proses pengujian.*
+
+### 3.23 Pengaturan Foreign Key atau Relasi
+
+![Gambar 23. Pengaturan foreign key](img/gambar_23.png)
+
+*Gambar 23. Tampilan pemeriksaan relasi antartabel pada phpMyAdmin.*
+
+## 4. Jawaban Titik Analisis
+
+### 4.1 Mengapa Primary Key Diperlukan?
+
+Primary key digunakan sebagai identitas unik setiap baris sehingga data dapat dibedakan dan dirujuk dengan jelas.
+
+### 4.2 Apa Fungsi Foreign Key?
+
+Foreign key menjaga hubungan antartabel dan membantu mencegah penggunaan nilai referensi yang tidak memiliki baris induk terkait.
+
+### 4.3 Apa yang Terjadi Ketika Data Melanggar Constraint?
+
+MariaDB dapat menolak operasi yang melanggar aturan seperti `CHECK`, `UNIQUE`, atau `FOREIGN KEY`. Pesan galat perlu diperiksa bersama perintah SQL yang dijalankan untuk mengetahui penyebabnya.
+
+### 4.4 Apa Perbedaan ON DELETE CASCADE dan ON DELETE SET NULL?
+
+`ON DELETE CASCADE` menghapus baris terkait pada tabel anak ketika baris induk dihapus. Sementara itu, `ON DELETE SET NULL` mengatur nilai foreign key pada tabel anak menjadi `NULL`, jika kolom tersebut mengizinkan nilai `NULL`.
+
+*Catatan: Cocokkan kembali pertanyaan dan jawaban ini dengan soal Titik Analisis pada modul praktikum.*
+
+## 5. Hasil Latihan dan Modifikasi
+
+Latihan DDL mencakup pemeriksaan struktur tabel dan relasi, pengujian constraint, serta perubahan struktur menggunakan `ALTER TABLE`.
+
+Pada basis data Klinik, pengujian dapat berkaitan dengan batas stok obat dan jumlah obat pada detail resep. Pada latihan Kopma, pengujian dapat berkaitan dengan foreign key, nilai stok, keunikan kode barang, perubahan kolom, serta aturan `ON DELETE SET NULL`.
+
+Hasil latihan perlu disesuaikan dengan perintah SQL yang benar-benar dijalankan. Perintah yang menghasilkan pesan galat tidak boleh dinyatakan berhasil.
+
+## 6. Tugas Mandiri: Milestone Proyek 5
+
+Proyek basis data menggunakan tema **Klinik Mutiara**, dengan basis data `klinik_025`. Tabel proyek berkaitan dengan pasien, dokter, petugas, pemeriksaan, resep, obat, dan detail resep.
+
+File yang berkaitan dengan praktikum ini meliputi:
+
+- `p05_ddl_25430025.sql`
+- `p05_ddl_kopma_25430025.sql`
+- `p05_erd_fisik_25430025.drawio`
+
+Pastikan nama, isi, dan keberadaan file tersebut sesuai dengan pekerjaan yang benar-benar dibuat dan diunggah ke repositori.
+
+## 7. Pembahasan dan Kendala
+
+Praktikum ini menunjukkan bahwa DDL digunakan untuk membuat dan mengubah struktur basis data serta menetapkan aturan integritas. Primary key dan foreign key membantu mengatur identitas serta hubungan antartabel, sedangkan constraint digunakan untuk membatasi nilai data.
+
+Pesan galat selama percobaan dapat menjadi petunjuk untuk memeriksa sintaks SQL, struktur tabel, nilai yang dimasukkan, atau hubungan foreign key. Setiap kendala perlu dijelaskan berdasarkan perintah dan pesan yang benar-benar muncul pada phpMyAdmin.
+
+## 8. Kesimpulan
+
+DDL seperti `CREATE TABLE` dan `ALTER TABLE` digunakan untuk membuat serta mengubah struktur basis data. Primary key, foreign key, `CHECK`, dan `UNIQUE` membantu menjaga integritas data. Pengujian diperlukan untuk memastikan struktur tabel dan aturan basis data berjalan sesuai kebutuhan.
+
+## 9. Pernyataan Penggunaan AI
+
+AI digunakan sebagai alat bantu untuk merapikan susunan laporan dan membantu menjelaskan konsep DDL.
+
+## 10. Bukti Git
+
+**Repository:** [basisdata-25430025](https://github.com/mutiaraichayani-dotcom/basisdata-25430025)
+
+**File laporan:** `laporan/p05_laporan_25430025.md`
+
+**File SQL Kopma:** `p05_ddl_kopma_25430025.sql`
+
+
+---
+
+## Checklist
+
+- [ ] Identitas laporan sudah lengkap.
+- [ ] Tujuan praktikum ditulis.
+- [ ] Ringkasan dasar teori sudah disertakan.
+- [ ] Langkah percobaan dilengkapi screenshot dan keterangan.
+- [ ] Semua pertanyaan Titik Analisis dari modul sudah dijawab.
+- [ ] Hasil latihan dan modifikasi sudah dicantumkan.
+- [ ] Tugas mandiri Milestone Proyek 5 sudah dijelaskan.
+- [ ] Pembahasan mencakup hasil dan kendala yang benar-benar terjadi.
+- [ ] Kesimpulan sudah ditulis.
+- [ ] Pernyataan penggunaan AI sudah dicantumkan.
+- [ ] Tautan repositori dan hash commit aktual sudah dicantumkan.
+- [ ] Checklist resmi dari buku praktikum sudah disalin dan dicentang sesuai pekerjaan.
