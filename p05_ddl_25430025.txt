@@ -1,0 +1,163 @@
+-- =====================================================
+-- PROYEK BASIS DATA KLINIK MUTIARA
+-- Nama: Mutiara Icha Yani
+-- Npm: 25430025
+-- Kelas: A
+-- PERTEMUAN 5: DDL DAN CONSTRAINT
+-- =====================================================
+
+CREATE DATABASE IF NOT EXISTS klinik_025;
+USE klinik_025;
+
+-- =====================================================
+-- 1. Menghapus tabel lama dengan urutan terbalik
+-- =====================================================
+
+DROP TABLE IF EXISTS detail_resep;
+DROP TABLE IF EXISTS resep;
+DROP TABLE IF EXISTS pemeriksaan;
+DROP TABLE IF EXISTS obat;
+DROP TABLE IF EXISTS petugas;
+DROP TABLE IF EXISTS dokter;
+DROP TABLE IF EXISTS pasien;
+
+-- =====================================================
+-- 2. Tabel PASIEN
+-- AB-01: Nomor pasien digunakan sebagai identitas pasien
+-- =====================================================
+
+CREATE TABLE pasien (
+    no_pasien VARCHAR(10) NOT NULL,
+    no_identitas VARCHAR(20) NOT NULL,
+    nama_pasien VARCHAR(100) NOT NULL,
+    tanggal_lahir DATE NOT NULL,
+    alamat VARCHAR(200),
+    no_telepon VARCHAR(15),
+
+    PRIMARY KEY (no_pasien)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 3. Tabel DOKTER
+-- =====================================================
+
+CREATE TABLE dokter (
+    kode_dokter VARCHAR(10) NOT NULL,
+    nama_dokter VARCHAR(100) NOT NULL,
+
+    PRIMARY KEY (kode_dokter)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 4. Tabel PETUGAS
+-- =====================================================
+
+CREATE TABLE petugas (
+    kode_petugas VARCHAR(10) NOT NULL,
+    nama_petugas VARCHAR(100) NOT NULL,
+    jabatan VARCHAR(50) NOT NULL,
+
+    PRIMARY KEY (kode_petugas)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 5. Tabel OBAT
+-- AB-07: Stok obat tidak boleh negatif
+-- =====================================================
+
+CREATE TABLE obat (
+    kode_obat VARCHAR(10) NOT NULL,
+    nama_obat VARCHAR(100) NOT NULL,
+    stok INT NOT NULL DEFAULT 0,
+    satuan VARCHAR(30) NOT NULL,
+    batas_minimum_stok INT NOT NULL DEFAULT 0,
+
+    PRIMARY KEY (kode_obat),
+
+    CONSTRAINT ck_obat_stok
+        CHECK (stok >= 0),
+
+    CONSTRAINT ck_obat_stok_min
+        CHECK (batas_minimum_stok >= 0)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 6. Tabel PEMERIKSAAN
+-- AB-02: Pasien dapat memiliki beberapa pemeriksaan
+-- AB-03: Setiap pemeriksaan dilakukan oleh seorang dokter
+-- =====================================================
+
+CREATE TABLE pemeriksaan (
+    no_pemeriksaan VARCHAR(15) NOT NULL,
+    no_pasien VARCHAR(10) NOT NULL,
+    kode_dokter VARCHAR(10) NOT NULL,
+    tanggal_pemeriksaan DATETIME NOT NULL,
+    diagnosis TEXT NOT NULL,
+
+    PRIMARY KEY (no_pemeriksaan),
+
+    CONSTRAINT fk_pemeriksaan_pasien
+        FOREIGN KEY (no_pasien)
+        REFERENCES pasien(no_pasien),
+
+    CONSTRAINT fk_pemeriksaan_dokter
+        FOREIGN KEY (kode_dokter)
+        REFERENCES dokter(kode_dokter)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 7. Tabel RESEP
+-- AB-05: Resep dibuat berdasarkan pemeriksaan
+-- =====================================================
+
+CREATE TABLE resep (
+    no_resep VARCHAR(15) NOT NULL,
+    no_pemeriksaan VARCHAR(15) NOT NULL,
+    tanggal_resep DATE NOT NULL,
+
+    PRIMARY KEY (no_resep),
+
+    CONSTRAINT fk_resep_pemeriksaan
+        FOREIGN KEY (no_pemeriksaan)
+        REFERENCES pemeriksaan(no_pemeriksaan)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 8. Tabel DETAIL_RESEP
+-- AB-06: Menghubungkan resep dengan obat
+-- =====================================================
+
+CREATE TABLE detail_resep (
+    no_resep VARCHAR(15) NOT NULL,
+    kode_obat VARCHAR(10) NOT NULL,
+    jumlah_obat INT NOT NULL,
+    aturan_penggunaan VARCHAR(100) NOT NULL,
+
+    PRIMARY KEY (no_resep, kode_obat),
+
+    CONSTRAINT fk_detail_resep_resep
+        FOREIGN KEY (no_resep)
+        REFERENCES resep(no_resep)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_detail_resep_obat
+        FOREIGN KEY (kode_obat)
+        REFERENCES obat(kode_obat),
+
+    CONSTRAINT ck_detail_resep_jumlah
+        CHECK (jumlah_obat > 0)
+) ENGINE=InnoDB;
+
+-- =====================================================
+-- 9. Memeriksa tabel yang telah dibuat
+-- =====================================================
+
+SHOW TABLES;
+
+SHOW CREATE TABLE pasien;
+SHOW CREATE TABLE dokter;
+SHOW CREATE TABLE petugas;
+SHOW CREATE TABLE pemeriksaan;
+SHOW CREATE TABLE resep;
+SHOW CREATE TABLE obat;
+SHOW CREATE TABLE detail_resep;
